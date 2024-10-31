@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code2, Server, Palette } from 'lucide-react';
+import React from "react";
+import { Code2, Server, Palette } from "lucide-react";
 
 export default function About() {
   return (
@@ -17,10 +17,9 @@ export default function About() {
           </div>
           <div>
             <p className="text-base text-gray-600 mb-6">
-              With over 5 years of experience in full-stack development, I specialize
-              in building scalable web applications that solve real-world problems.
-              My passion lies in creating clean, efficient code and delivering
-              exceptional user experiences.
+              With over 5 years of experience in full-stack development, I specialize in building scalable web
+              applications that solve real-world problems. My passion lies in creating clean, efficient code and
+              delivering exceptional user experiences.
             </p>
             <div className="grid gap-4">
               <div className="flex gap-3">

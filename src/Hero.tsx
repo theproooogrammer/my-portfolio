@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -11,9 +11,8 @@ export default function Hero() {
             <span className="block text-blue-600">Building Digital Experiences</span>
           </h1>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl">
-            I craft robust and scalable applications using modern technologies.
-            Specialized in creating exceptional digital experiences that combine
-            beautiful interfaces with powerful backend systems.
+            I craft robust and scalable applications using modern technologies. Specialized in creating exceptional
+            digital experiences that combine beautiful interfaces with powerful backend systems.
           </p>
           <div className="flex gap-4">
             <a

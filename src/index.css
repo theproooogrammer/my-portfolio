@@ -40,11 +40,12 @@ body {
 
 /* Improve mobile tap targets */
 @media (max-width: 768px) {
-  button, 
+
+  button,
   a {
     @apply min-h-[44px] min-w-[44px];
   }
-  
+
   input,
   textarea {
     @apply text-base;
@@ -59,6 +60,7 @@ body {
 
 /* Active state feedback */
 @media (max-width: 768px) {
+
   button:active,
   a:active {
     @apply opacity-70;

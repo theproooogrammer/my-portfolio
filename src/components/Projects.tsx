@@ -1,16 +1,17 @@
-import React, { useRef } from 'react';
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useRef } from "react";
+import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Projects() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 600; // Scroll by roughly 2 project cards
-      const newScrollPosition = scrollContainerRef.current.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+      const newScrollPosition =
+        scrollContainerRef.current.scrollLeft + (direction === "left" ? -scrollAmount : scrollAmount);
       scrollContainerRef.current.scrollTo({
         left: newScrollPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -22,7 +23,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=600",
       tech: ["React", "Node.js", "MongoDB"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Task Management App",
@@ -30,7 +31,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
       tech: ["TypeScript", "Next.js", "Prisma"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "AI Content Platform",
@@ -38,7 +39,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600",
       tech: ["Python", "React", "TensorFlow"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Social Media Dashboard",
@@ -46,7 +47,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
       tech: ["Vue.js", "Firebase", "D3.js"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Real Estate Platform",
@@ -54,7 +55,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=600",
       tech: ["Next.js", "PostgreSQL", "AWS"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Health & Fitness App",
@@ -62,7 +63,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=600",
       tech: ["React Native", "Node.js", "MongoDB"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Learning Management",
@@ -70,7 +71,7 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=600",
       tech: ["Vue.js", "Django", "PostgreSQL"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Weather Analytics",
@@ -78,8 +79,8 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&q=80&w=600",
       tech: ["React", "Python", "D3.js"],
       liveUrl: "#",
-      githubUrl: "#"
-    }
+      githubUrl: "#",
+    },
   ];
 
   return (
@@ -89,15 +90,15 @@ export default function Projects() {
         <div className="relative group">
           {/* Navigation Arrows - Hidden on mobile */}
           <button
-            onClick={() => scroll('left')}
+            onClick={() => scroll("left")}
             className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-gray-600 hover:text-gray-900 transition-all opacity-0 group-hover:opacity-100 group-hover:-translate-x-6 disabled:opacity-0"
             aria-label="Scroll left"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
+
           <button
-            onClick={() => scroll('right')}
+            onClick={() => scroll("right")}
             className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-gray-600 hover:text-gray-900 transition-all opacity-0 group-hover:opacity-100 group-hover:translate-x-6 disabled:opacity-0"
             aria-label="Scroll right"
           >
@@ -105,32 +106,24 @@ export default function Projects() {
           </button>
 
           {/* Projects Container */}
-          <div 
+          <div
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory hide-scrollbar scroll-smooth"
           >
             {projects.map((project, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="flex-none w-[280px] snap-start bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="h-36">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{project.title}</h3>
                   <p className="text-sm text-gray-600 mb-3">{project.description}</p>
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded-full"
-                      >
+                      <span key={techIndex} className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded-full">
                         {tech}
                       </span>
                     ))}

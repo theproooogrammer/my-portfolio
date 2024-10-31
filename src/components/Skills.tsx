@@ -1,68 +1,40 @@
-import React from 'react';
-import { Globe, Code2, Database, Cpu } from 'lucide-react';
+import React from "react";
+import { Globe, Code2, Database, Cpu } from "lucide-react";
 
 export default function Skills() {
   const skillCategories = [
     {
       title: "Frontend",
       icon: <Globe className="w-6 h-6" />,
-      skills: [
-        "React/Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Redux",
-        "Vue.js",
-        "WebGL/Three.js"
-      ],
+      skills: ["React/Next.js", "TypeScript", "Tailwind CSS", "Redux", "Vue.js", "WebGL/Three.js"],
       bgGradient: "from-blue-50 to-indigo-50",
       iconColor: "text-blue-600",
-      borderColor: "border-blue-100"
+      borderColor: "border-blue-100",
     },
     {
       title: "Backend",
       icon: <Code2 className="w-6 h-6" />,
-      skills: [
-        "Node.js",
-        "Python/Django",
-        "GraphQL",
-        "REST APIs",
-        "Microservices",
-        "WebSockets"
-      ],
+      skills: ["Node.js", "Python/Django", "GraphQL", "REST APIs", "Microservices", "WebSockets"],
       bgGradient: "from-green-50 to-emerald-50",
       iconColor: "text-green-600",
-      borderColor: "border-green-100"
+      borderColor: "border-green-100",
     },
     {
       title: "Database",
       icon: <Database className="w-6 h-6" />,
-      skills: [
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
-        "Prisma ORM",
-        "MySQL",
-        "ElasticSearch"
-      ],
+      skills: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "MySQL", "ElasticSearch"],
       bgGradient: "from-purple-50 to-fuchsia-50",
       iconColor: "text-purple-600",
-      borderColor: "border-purple-100"
+      borderColor: "border-purple-100",
     },
     {
       title: "DevOps & Tools",
       icon: <Cpu className="w-6 h-6" />,
-      skills: [
-        "Docker/K8s",
-        "AWS/GCP",
-        "CI/CD",
-        "Git/GitHub",
-        "Linux/Nginx",
-        "Monitoring"
-      ],
+      skills: ["Docker/K8s", "AWS/GCP", "CI/CD", "Git/GitHub", "Linux/Nginx", "Monitoring"],
       bgGradient: "from-orange-50 to-amber-50",
       iconColor: "text-orange-600",
-      borderColor: "border-orange-100"
-    }
+      borderColor: "border-orange-100",
+    },
   ];
 
   return (

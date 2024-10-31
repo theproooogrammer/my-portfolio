@@ -1,5 +1,5 @@
-import React from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import React from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -10,8 +10,8 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <p className="text-sm text-gray-600 mb-6">
-                I'm always interested in hearing about new projects and opportunities.
-                Whether you have a question or just want to say hi, feel free to reach out!
+                I'm always interested in hearing about new projects and opportunities. Whether you have a question or
+                just want to say hi, feel free to reach out!
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
