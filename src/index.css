@@ -6,11 +6,21 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  @apply antialiased text-gray-900 touch-pan-x;
-  overscroll-behavior-x: none;
+  @apply antialiased text-gray-900;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  isolation: isolate;
+  min-height: 100vh;
 }
 
 ::selection {
