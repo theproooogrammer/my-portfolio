@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply antialiased text-gray-900 touch-pan-x;
+  overscroll-behavior-x: none;
+}
+
+::selection {
+  @apply bg-blue-600 text-white;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Improve mobile tap targets */
+@media (max-width: 768px) {
+  button, 
+  a {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  input,
+  textarea {
+    @apply text-base;
+    font-size: 16px !important;
+  }
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-duration: 200ms;
+}
+
+/* Active state feedback */
+@media (max-width: 768px) {
+  button:active,
+  a:active {
+    @apply opacity-70;
+  }
+}
